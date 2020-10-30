@@ -1,4 +1,5 @@
 # OpenWRT - domos
+This branch is based on https://github.com/openwrt/openwrt tag v19.07.4
 
 ## prerequisites
 * ubuntu 20.04
