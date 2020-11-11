@@ -26,7 +26,7 @@ make
 * Find the new device block name (for instance using `dmesg` or `lsblk`), it should look like `/dev/sdX`. *WARNING:* In the next step you can destroy all your data if you don't get it right.
 * Flash the compute module (replace /dev/sdX by the device name):
 ```
-zcat scp bin/targets/brcm2708/bcm2709-glibc/openwrt-brcm2708-bcm2709-rpi-2-squashfs-factory.img.gz | sudo dd status=progress bs=4M of=/dev/sdX
+zcat bin/targets/brcm2708/bcm2709-glibc/openwrt-brcm2708-bcm2709-rpi-2-squashfs-factory.img.gz | sudo dd status=progress bs=4M of=/dev/sdX
 ```
 ### re-flashing (from the gateway)
 #### Complete reflash (will erase configuration)
