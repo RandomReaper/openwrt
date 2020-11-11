@@ -1,0 +1,11 @@
+/var/log/z-way-server.log {
+        size=25M
+        rotate 10
+        compress
+        nodelaycompress
+        missingok
+        notifempty
+        postrotate
+    /usr/bin/killall -HUP z-way-server 2>/dev/null || true
+endscript
+}
