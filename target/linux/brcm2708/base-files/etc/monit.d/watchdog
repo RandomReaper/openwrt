@@ -1,0 +1,5 @@
+# check that the watchdog service is running
+## unnecessary since kernel is configured with CONFIG_WATCHDOG_NOWAYOUT=y
+# Tested with
+## * manually closing the watchdog : ubus call system watchdog '{"stop":true}'
+## * force crashing the kernel : echo c > /proc/sysrq-trigger
