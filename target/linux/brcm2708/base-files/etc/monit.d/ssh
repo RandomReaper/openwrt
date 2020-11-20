@@ -1,0 +1,11 @@
+# check that ssh is running
+# should be rare, but so dangerous => reboot
+#
+
+check host localhost with address 0.0.0.0
+  if failed port 22 then exec "/sbin/rebootx"
+
+check process dropbear
+  matching "dropbear"
+  start program = "/etc/init.d/dropbear start"
+  stop program = "/etc/init.d/dropbear stop"

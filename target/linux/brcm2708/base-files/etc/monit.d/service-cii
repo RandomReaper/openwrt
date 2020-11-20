@@ -1,1 +1,3 @@
 # check that cii is running
+check process apache with pidfile /var/run/cii_mbus_ttyUSB1.pid
+  

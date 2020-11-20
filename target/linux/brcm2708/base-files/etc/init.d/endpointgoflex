@@ -7,6 +7,6 @@ STOP=01
 start_service() {
     procd_open_instance
     procd_set_param command /bin/sh "-c" "cd /cloudioJar && /opt/jre/bin/java -jar EndpointGoflex.jar"
+    procd_set_param pidfile /var/run/cloudio-endpoint.pid
     procd_close_instance
 }
-

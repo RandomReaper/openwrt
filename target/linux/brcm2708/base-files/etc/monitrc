@@ -90,7 +90,7 @@ set log syslog
 ## available in the back end filesystem).
 #
 set eventqueue
-   basedir /var/monit  # set the base directory where events will be stored
+   basedir /tmp  # set the base directory where events will be stored
    slots 100           # optionally limit the queue size
 
 
