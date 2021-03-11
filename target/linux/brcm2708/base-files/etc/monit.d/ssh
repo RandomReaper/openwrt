@@ -3,7 +3,7 @@
 #
 
 check host localhost with address 0.0.0.0
-  if failed port 22 then exec "/sbin/rebootx"
+  if failed port 22 then exec "/sbin/reboot"
 
 check process dropbear
   matching "dropbear"

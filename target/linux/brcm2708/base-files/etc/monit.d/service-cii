@@ -1,3 +1,5 @@
 # check that cii is running
-check process apache with pidfile /var/run/cii_mbus_ttyUSB1.pid
-  
+check process cii_mbus with pidfile /var/run/cii_mbus_ttyUSB1.pid
+ start program = "/etc/init.d/cii_mbus start"
+ stop program = "/etc/init.d/cii_mbus stop"
+ if does not exist then restart

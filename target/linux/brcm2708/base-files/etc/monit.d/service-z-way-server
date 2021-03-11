@@ -1,1 +1,22 @@
-# check that z-way-server is running
+# check that z-way-server is configuration is ok
+check file z-way-server-config with path /opt/z-way-server/automation/storage/configjson-06b2d3b23dce96e1619d2b53d6c947ec.json
+  start program = "/etc/init.d/z-way-server start"
+  stop program = "/usr/bin/killall z-way-server"
+  if content != ".*ttyUSB0.*" then restart
+
+check process z-way-server-process matching "z-way-server"
+  start program = "/etc/init.d/z-way-server start"
+  stop program = "/usr/bin/killall z-way-server"
+  if does not exist then restart
+
+# must be checked using POST
+#check host z-way-server-http-api with address 127.0.0.1
+#  start program = "/etc/init.d/z-way-server start"
+#  stop program = "/usr/bin/killall z-way-server"
+#  if failed
+#    port 8083
+#    protocol HTTP
+#    request "/ZWaveAPI/Data"
+#    username ""
+#    password ""
+#  then restart

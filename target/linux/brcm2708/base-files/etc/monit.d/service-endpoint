@@ -1,1 +1,5 @@
 # check that the endpoint is running and connected
+check process endpoint matching "java -jar EndpointGoflex\.jar"
+  start program = "/etc/init.d/endpointgoflex start"
+  stop program = "/etc/init.d/endpointgoflex stop"
+  if does not exist then restart
