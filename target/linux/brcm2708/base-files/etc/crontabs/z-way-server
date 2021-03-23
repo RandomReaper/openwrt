@@ -1,0 +1,3 @@
+@reboot /usr/sbin/logrotate /etc/logrotate.conf
+@hourly /usr/sbin/logrotate /etc/logrotate.conf
+

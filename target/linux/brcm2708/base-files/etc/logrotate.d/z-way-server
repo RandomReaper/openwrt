@@ -1,6 +1,6 @@
 /var/log/z-way-server.log {
-        size=25M
-        rotate 10
+        size=1M
+        rotate 2
         compress
         nodelaycompress
         missingok
