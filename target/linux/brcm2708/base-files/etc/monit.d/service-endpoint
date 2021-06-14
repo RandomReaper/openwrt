@@ -3,3 +3,9 @@ check process endpoint matching "java -jar EndpointCloudio\.jar"
   start program = "/etc/init.d/endpointcloudio start"
   stop program = "/etc/init.d/endpointcloudio stop"
   if does not exist then restart
+
+check program endpoint-mqtt-connection with path /bin/check-enpoint-connection.sh
+  start program = "/etc/init.d/endpointcloudio start"
+  stop program = "/etc/init.d/endpointcloudio stop"
+  if status != 0 then restart
+
